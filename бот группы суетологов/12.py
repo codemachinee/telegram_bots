@@ -1,10 +1,12 @@
 import telebot
+import os
 from telebot import types
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 from random import *
 
-token = ""
+token = os.environ['TELEGRAM_TOKEN']
+
 bot = telebot.TeleBot(token)
 
 kb1 = types.InlineKeyboardMarkup(row_width=1)
